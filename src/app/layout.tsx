@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Mano Arvind - AI Engineer Portfolio",
+  title: "Mano Arvind | Portfolio",
   description: "Data Science Graduate and AI Enthusiast",
 };
 
