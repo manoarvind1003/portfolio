@@ -1,26 +1,256 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Dynamic Foreground/Background */
+  --color-white: var(--foreground);
+  --color-black: var(--background);
+
+  /* Dynamic Backgrounds */
+  --color-bg-primary: var(--app-bg-primary);
+  --color-bg-secondary: var(--app-bg-secondary);
+  --color-bg-tertiary: var(--app-bg-tertiary);
+
+  /* Vibrant Premium Accents */
+  --color-accent-blue: var(--app-accent-blue);
+  --color-accent-purple: var(--app-accent-purple);
+  --color-accent-gold: var(--app-accent-gold);
+
+  /* Theme-adaptive text layers */
+  --color-text-primary: var(--app-text-primary);
+  --color-text-secondary: var(--app-text-secondary);
+  --color-text-muted: var(--app-text-muted);
+
+  /* Theme-adaptive card surface */
+  --color-card: var(--app-card-bg);
+  --color-card-border: var(--app-card-border);
+  --color-card-hover: var(--app-card-hover);
+
+  /* Custom Glassmorphism Tokens */
+  --background-glass: var(--app-bg-glass);
+  --border-glass: var(--app-border-glass);
+  --shadow-glass: var(--app-shadow-glass);
+  --blur-glass: 24px;
+
+  /* Typography */
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root,
+.light {
+  /* Vibrant Clean Light Theme */
+  --app-bg-primary: #FFFFFF;
+  --app-bg-secondary: #FAFAFA;
+  --app-bg-tertiary: #F4F4F5;
+
+  --app-accent-blue: #FF3B5C;
+  /* Red/Pink from top/right bubble */
+  --app-accent-purple: #B533FF;
+  /* Violet/Purple from bottom bubble */
+  --app-accent-gold: #F97316;
+  /* Orange from left bubble */
+
+  /* Text */
+  --app-text-primary: #18181B;
+  /* Very dark zinc */
+  --app-text-secondary: #3F3F46;
+  --app-text-muted: #71717A;
+
+  /* Cards */
+  --app-card-bg: rgba(255, 255, 255, 0.7);
+  --app-card-border: rgba(24, 24, 27, 0.08);
+  --app-card-hover: rgba(24, 24, 27, 0.04);
+
+  /* Glass */
+  --app-bg-glass: rgba(255, 255, 255, 0.7);
+  --app-border-glass: rgba(24, 24, 27, 0.06);
+  --app-shadow-glass: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+  --background: #FFFFFF;
+  --foreground: #18181B;
+
+  /* Section bg */
+  --app-section-bg: #FAFAFA;
+  --app-section-alt-bg: #FFFFFF;
+}
+
+.dark {
+  /* Deep Tech Dark Theme */
+  --app-bg-primary: #030712;
+  --app-bg-secondary: #0B1120;
+  --app-bg-tertiary: #1E293B;
+
+  --app-accent-blue: #6366F1;
+  --app-accent-purple: #7C3AED;
+  --app-accent-gold: #FFD700;
+
+  /* Text */
+  --app-text-primary: #F1F5F9;
+  --app-text-secondary: #94A3B8;
+  --app-text-muted: #64748B;
+
+  /* Cards */
+  --app-card-bg: rgba(11, 17, 32, 0.5);
+  --app-card-border: rgba(148, 163, 184, 0.08);
+  --app-card-hover: rgba(148, 163, 184, 0.04);
+
+  /* Glass */
+  --app-bg-glass: rgba(11, 15, 25, 0.5);
+  --app-border-glass: rgba(255, 255, 255, 0.04);
+  --app-shadow-glass: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+  --background: #030712;
+  --foreground: #F1F5F9;
+
+  /* Section bg */
+  --app-section-bg: #030712;
+  --app-section-alt-bg: #0B1120;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle at 50% 15%, var(--app-bg-secondary) 0%, var(--app-bg-primary) 70%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   Custom Futuristic & Premium Utilities
+   ========================================================================== */
+
+/* Futuristic digital grid texture overlay */
+.bg-grid {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, var(--app-border-glass) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--app-border-glass) 1px, transparent 1px);
+}
+
+/* Modern Glassmorphism Cards */
+.glass-panel {
+  background-color: var(--background-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-glass);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Semi-transparent navigation */
+.glass-nav {
+  background: var(--app-bg-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border-right: 1px solid var(--app-border-glass);
+  transition: all 0.3s ease-in-out;
+}
+
+/* High-tech ambient glowing dropshadows */
+.glow-blue {
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.glow-purple {
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.2);
+}
+
+/* Vibrant premium text gradient effect */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, var(--app-accent-purple) 0%, var(--app-accent-blue) 50%, var(--app-accent-gold) 100%);
+}
+
+/* Smooth transitions globally */
+html,
+body,
+.glass-panel,
+.glass-nav {
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover glow transitions */
+.hover-glow:hover {
+  filter: drop-shadow(0 0 8px var(--app-accent-gold));
+}
+
+/* Hide scrollbar utility */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--app-accent-blue), var(--app-accent-purple), transparent);
+  opacity: 0.3;
+}
+
+/* Typing cursor blink animation */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: var(--app-accent-blue);
+  font-weight: 300;
+}
+
+/* Float animation keyframes */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Consistent card component */
+.theme-card {
+  background: var(--app-card-bg);
+  border: 1px solid var(--app-card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-card:hover {
+  background: var(--app-card-hover);
+  border-color: var(--app-accent-blue);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--app-accent-blue) 20%, transparent);
 }
