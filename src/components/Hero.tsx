@@ -88,7 +88,9 @@ export default function Hero() {
                             Turning Data Into <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-purple font-semibold">Intelligent Solutions</span>
                         </p>
                         <p className="text-sm md:text-base text-text-muted font-light leading-relaxed opacity-90">
-                            Data Science Graduate passionate about building AI/ML models, uncovering complex structural insights, and deploying highly automated enterprise solutions.
+                            Data Science Graduate with strong foundation in data analysis, machine learning, and full-stack
+development. Skilled in building data-driven applications and extracting insights from complex datasets.
+Seeking an entry-level role to apply analytical and technical skills in solving real-world problems.
                         </p>
                     </motion.div>
 

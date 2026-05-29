@@ -3,41 +3,11 @@
 import { motion } from 'framer-motion';
 import { GitBranch, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef } from 'react';
+import Link from 'next/link';
+import { projects } from '@/lib/projectsData';
 
-const projects = [
-    {
-        id: 1,
-        title: 'Stock Price Prediction',
-        description: 'LSTM model to predict stock prices using historical data with high accuracy.',
-        tags: ['Python', 'LSTM', 'Finance'],
-        gradient: 'from-accent-blue/20 to-accent-purple/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-blue)] hover:border-accent-blue/50'
-    },
-    {
-        id: 2,
-        title: 'Customer Churn Analysis',
-        description: 'Analyzed customer behavior and built churn prediction model with actionable insights.',
-        tags: ['Python', 'ML', 'Analytics'],
-        gradient: 'from-accent-purple/20 to-accent-gold/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-purple)] hover:border-accent-purple/50'
-    },
-    {
-        id: 3,
-        title: 'Fake News Detection',
-        description: 'NLP-based model to detect fake news from real news with deep learning.',
-        tags: ['Python', 'NLP', 'Deep Learning'],
-        gradient: 'from-accent-blue/20 to-accent-gold/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-gold)] hover:border-accent-gold/50'
-    },
-    {
-        id: 4,
-        title: 'Sales Dashboard',
-        description: 'Interactive dashboard for sales insights using Power BI with real-time data.',
-        tags: ['Power BI', 'DAX', 'Analytics'],
-        gradient: 'from-accent-gold/20 to-accent-blue/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-blue)] hover:border-accent-blue/50'
-    }
-];
+// Featured projects for the home page carousel (first 5)
+const featuredProjects = projects.filter((p) => p.featured);
 
 export default function Projects() {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -72,14 +42,17 @@ export default function Projects() {
                             A collection of data science projects solving real-world problems.
                         </p>
                     </div>
-                    <button className="hidden md:flex px-6 py-2.5 rounded-full border border-card-border hover:bg-card-hover transition-colors text-sm font-medium text-text-primary">
+                    <Link
+                        href="/projects"
+                        className="hidden md:flex px-6 py-2.5 rounded-full border border-card-border hover:bg-card-hover hover:border-accent-blue/50 transition-all text-sm font-medium text-text-primary"
+                    >
                         View All Projects
-                    </button>
+                    </Link>
                 </motion.div>
 
                 <div className="relative group px-6 lg:px-12">
                     <div ref={scrollRef} className="flex gap-6 overflow-x-auto pb-10 hide-scrollbar snap-x snap-mandatory px-4 -mx-4 lg:mx-0 lg:px-0">
-                        {projects.map((project, idx) => (
+                        {featuredProjects.map((project, idx) => (
                             <motion.div
                                 key={project.id}
                                 className={`min-w-[320px] md:min-w-[400px] snap-center glass-panel rounded-2xl overflow-hidden border border-card-border transition-all duration-300 cursor-pointer group/card ${project.glow}`}
@@ -93,12 +66,24 @@ export default function Projects() {
                                 <div className={`w-full h-48 relative overflow-hidden transition-colors duration-500 bg-gradient-to-br ${project.gradient}`}>
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 bg-black/60 backdrop-blur-sm transition-all duration-300">
                                         <div className="flex gap-4">
-                                            <button className="p-3 bg-white/10 rounded-full hover:bg-accent-blue hover:text-white transition-colors duration-300 text-white">
-                                                <GitBranch size={20} />
-                                            </button>
-                                            <button className="p-3 bg-white/10 rounded-full hover:bg-accent-purple hover:text-white transition-colors duration-300 text-white">
-                                                <ExternalLink size={20} />
-                                            </button>
+                                            {project.githubLink ? (
+                                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-accent-blue hover:text-white transition-colors duration-300 text-white">
+                                                    <GitBranch size={20} />
+                                                </a>
+                                            ) : (
+                                                <button className="p-3 bg-white/10 rounded-full hover:bg-accent-blue hover:text-white transition-colors duration-300 text-white">
+                                                    <GitBranch size={20} />
+                                                </button>
+                                            )}
+                                            {project.liveLink ? (
+                                                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 rounded-full hover:bg-accent-purple hover:text-white transition-colors duration-300 text-white">
+                                                    <ExternalLink size={20} />
+                                                </a>
+                                            ) : (
+                                                <button className="p-3 bg-white/10 rounded-full hover:bg-accent-purple hover:text-white transition-colors duration-300 text-white">
+                                                    <ExternalLink size={20} />
+                                                </button>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -131,9 +116,12 @@ export default function Projects() {
                 </div>
 
                 <div className="mt-8 flex justify-center md:hidden px-6">
-                    <button className="px-6 py-2.5 rounded-full border border-card-border hover:bg-card-hover transition-colors text-sm font-medium w-full max-w-sm text-text-primary">
+                    <Link
+                        href="/projects"
+                        className="px-6 py-2.5 rounded-full border border-card-border hover:bg-card-hover hover:border-accent-blue/50 transition-all text-sm font-medium w-full max-w-sm text-text-primary text-center"
+                    >
                         View All Projects
-                    </button>
+                    </Link>
                 </div>
             </div>
 

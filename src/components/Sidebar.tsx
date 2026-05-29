@@ -5,12 +5,12 @@ import { Network, Terminal, Cpu, Database, Binary, LineChart, MessageSquare } fr
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
 const featureMap = [
-    { label: 'Initialization', icon: Terminal, id: 'hero', matrixNode: '0x00' },
-    { label: 'Profile', icon: Cpu, id: 'about', matrixNode: '0x01' },
-    { label: 'Technical Skills', icon: Binary, id: 'skills', matrixNode: '0x02' },
-    { label: 'Projects', icon: Database, id: 'projects', matrixNode: '0x03' },
-    { label: 'Education', icon: Network, id: 'education', matrixNode: '0x04' },
-    { label: 'Achievements', icon: LineChart, id: 'achievements', matrixNode: '0x05' },
+    { label: 'Initialization', icon: Terminal, id: 'hero' },
+    { label: 'Profile', icon: Cpu, id: 'about' },
+    { label: 'Technical Skills', icon: Binary, id: 'skills' },
+    { label: 'Projects', icon: Database, id: 'projects' },
+    { label: 'Education', icon: Network, id: 'education' },
+    { label: 'Achievements', icon: LineChart, id: 'achievements' },
     { label: 'Contact', icon: MessageSquare, id: 'contact', matrixNode: '0x06' },
 ];
 
@@ -100,7 +100,7 @@ export default function DataOperationsSidebar() {
                     <div className="flex items-center gap-3.5">
                         <div className="h-10 w-10 rounded-lg border border-accent-blue/15 bg-accent-blue/[0.01] flex items-center justify-center relative group overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-tr from-accent-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                            <Binary size={16} className="text-accent-blue/70 group-hover:text-accent-blue group-hover:rotate-12 transition-all duration-500" />
+                            <img src="/logo.png" alt="Logo" className="w-9 h-9" />
                         </div>
                         <div className="space-y-1">
                             <h2 className="text-[14px] font-bold tracking-[0.18em] text-text-primary uppercase">
