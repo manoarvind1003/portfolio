@@ -17,7 +17,7 @@ export default function TopActions() {
     return (
         <div className="fixed top-6 right-6 lg:top-8 lg:right-12 z-50 flex items-center gap-3">
             <a
-                href="/resume.pdf"
+                href="/MANO ARVIND RESUME.pdf"
                 download
                 className="px-5 py-2.5 rounded-full flex items-center gap-2 text-sm font-medium glass-panel border border-card-border hover:border-accent-blue/50 transition-all hover:shadow-[0_0_20px_rgba(99,102,241,0.3)] text-text-primary"
             >

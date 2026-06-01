@@ -6,10 +6,10 @@ import Image from 'next/image';
 
 const educationData = [
     {
-        year: '2021',
-        title: 'B.Sc. in Data Science',
-        institution: 'University Graduate Journey',
-        desc: 'Began my foundational journey into advanced analytics, statistical modeling, and computational theory.',
+        year: '2023 – 2026',
+        title: 'BSc in Data Science',
+        institution: 'SIES College of Arts, Science & Commerece, Mumbai',
+        desc: 'Pursuing a Bachelor of Science in Data Science with a CGPA of 9 / 10. Building strong foundations in statistical modeling, machine learning, Python programming, SQL, and data visualization.',
         icon: GraduationCap,
         color: 'from-accent-blue/15 to-transparent',
         border: 'hover:border-accent-blue/30',
@@ -19,23 +19,10 @@ const educationData = [
         calColor: 'text-accent-blue'
     },
     {
-        year: '2022',
-        title: 'Machine Learning Specialist',
-        institution: 'Certification & Analytics',
-        desc: 'Mastered training structures, optimizing deep learning neural networks, and parsing structured datasets.',
-        icon: Award,
-        color: 'from-accent-purple/15 to-transparent',
-        border: 'hover:border-accent-purple/30',
-        themeColor: 'group-hover:text-accent-purple',
-        iconBg: 'group-hover:bg-accent-purple',
-        iconText: 'text-accent-purple',
-        calColor: 'text-accent-purple'
-    },
-    {
-        year: '2023',
+        year: '2025 – 2026',
         title: 'Data Science Intern',
-        institution: 'Corporate Experience',
-        desc: 'Translated theoretical data modeling directly into enterprise value by orchestrating data pipelines.',
+        institution: 'MGRID Technologies, Hyderabad',
+        desc: 'Developed a machine learning career recommendation system and interactive dashboards using the MERN stack. Designed scalable full-stack applications with state-of-the-art predictive models.',
         icon: Briefcase,
         color: 'from-accent-gold/15 to-transparent',
         border: 'hover:border-accent-gold/30',
@@ -43,6 +30,19 @@ const educationData = [
         iconBg: 'group-hover:bg-accent-gold',
         iconText: 'text-accent-gold',
         calColor: 'text-accent-gold'
+    },
+    {
+        year: 'Certifications',
+        title: 'Technical Certifications',
+        institution: 'IBM, AWS, Microsoft, Google',
+        desc: 'Completed IBM SkillsBuild Data Science Path, AWS Educate Cloud Learning, Microsoft Learn Data Scientist Path, and Google Cloud Skills Training.',
+        icon: Award,
+        color: 'from-accent-purple/15 to-transparent',
+        border: 'hover:border-accent-purple/30',
+        themeColor: 'group-hover:text-accent-purple',
+        iconBg: 'group-hover:bg-accent-purple',
+        iconText: 'text-accent-purple',
+        calColor: 'text-accent-purple'
     }
 ];
 
@@ -84,7 +84,7 @@ export default function Education() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                            <motion.div 
+                            <motion.div
                                 className="absolute bottom-2 w-[220px] h-[25px] rounded-full bg-accent-blue/10 border border-accent-blue/20 blur-md pointer-events-none"
                                 animate={{ scale: [1, 0.9, 1], opacity: [0.5, 0.25, 0.5] }}
                                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -111,7 +111,7 @@ export default function Education() {
                     <div className="lg:col-span-7 space-y-6 relative before:absolute before:inset-y-4 before:left-12 before:w-[1px] before:bg-gradient-to-b before:from-card-border/60 before:via-card-border/20 before:to-transparent before:pointer-events-none sm:before:block hidden sm:block">
                         {/* Alternative fallback for uniform vertical margins across mobile spaces */}
                         <div className="space-y-6 sm:space-y-6 block -mt-6 sm:mt-0" />
-                        
+
                         {educationData.map((item, idx) => (
                             <motion.div
                                 key={idx}

@@ -59,7 +59,7 @@ export default function Hero() {
                     >
                         <Sparkles size={13} className="text-accent-gold animate-pulse" />
                         <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-accent-blue uppercase">
-                            Data Science Graduate
+                            Aspiring Data Analyst & Data Engineer
                         </span>
                     </motion.div>
 
@@ -88,9 +88,9 @@ export default function Hero() {
                             Turning Data Into <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-purple font-semibold">Intelligent Solutions</span>
                         </p>
                         <p className="text-sm md:text-base text-text-muted font-light leading-relaxed opacity-90">
-                            Data Science Graduate with strong foundation in data analysis, machine learning, and full-stack
-development. Skilled in building data-driven applications and extracting insights from complex datasets.
-Seeking an entry-level role to apply analytical and technical skills in solving real-world problems.
+                            Aspiring Data Analyst and Data Engineer with hands-on experience in SQL, Python, Excel, Power BI, Apache
+                            Spark, Kafka, and PostgreSQL. Skilled in data cleaning, transformation, analysis, visualization, and building
+                            end-to-end data pipelines to uncover insights and solve complex problems.
                         </p>
                     </motion.div>
 
@@ -128,14 +128,14 @@ Seeking an entry-level role to apply analytical and technical skills in solving 
                 >
                     {/* ADVANCED HUD SYSTEM OVERLAYS */}
                     {/* Outer Tech Calibration Ring */}
-                    <motion.div 
+                    <motion.div
                         className="absolute w-[360px] md:w-[480px] h-[360px] md:h-[480px] rounded-full border border-dashed border-accent-blue/20 pointer-events-none z-0"
                         animate={{ rotate: 360 }}
                         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
                     />
 
                     {/* Core Rotating Telemetry Frame */}
-                    <motion.div 
+                    <motion.div
                         className="absolute w-[300px] md:w-[400px] h-[300px] md:h-[400px] rounded-full border border-accent-purple/15 pointer-events-none z-0 before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-2 before:h-2 before:bg-accent-purple before:rounded-full before:shadow-[0_0_10px_rgba(168,85,247,0.5)]"
                         animate={{ rotate: -360 }}
                         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
@@ -171,7 +171,7 @@ Seeking an entry-level role to apply analytical and technical skills in solving 
                                 className={`absolute ${item.pos} p-3.5 rounded-2xl bg-gradient-to-b ${item.color} border shadow-[0_12px_30px_rgba(0,0,0,0.25)] backdrop-blur-md flex items-center justify-center z-30 transition-all duration-300 hover:scale-110 hover:border-text-primary/30 group/node`}
                             >
                                 <item.icon size={22} className="transition-transform duration-300 group-hover/node:rotate-6" />
-                                
+
                                 {/* Dynamic Inline HUD Tag */}
                                 <span className="absolute -bottom-6 bg-card/90 border border-card-border px-2 py-0.5 rounded text-[9px] font-mono font-medium text-text-secondary opacity-0 group-hover/stage:opacity-100 transition-opacity duration-300 pointer-events-none shadow-sm">
                                     {item.label}

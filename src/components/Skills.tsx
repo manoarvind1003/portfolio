@@ -7,10 +7,10 @@ const skillIcons = [
     { name: 'Python', glowColor: 'rgba(234,179,8,0.4)', x: 20, y: 15 },
     { name: 'SQL', glowColor: 'rgba(59,130,246,0.4)', x: 10, y: 40 },
     { name: 'Machine Learning', glowColor: 'rgba(168,85,247,0.4)', x: 75, y: 18 },
-    { name: 'TensorFlow', glowColor: 'rgba(234,179,8,0.4)', x: 88, y: 65 },
+    { name: 'MERN Stack', glowColor: 'rgba(234,179,8,0.4)', x: 88, y: 65 },
     { name: 'Power BI', glowColor: 'rgba(59,130,246,0.4)', x: 80, y: 42 },
-    { name: 'Data Visualization', glowColor: 'rgba(168,85,247,0.4)', x: 70, y: 85 },
-    { name: 'Pandas', glowColor: 'rgba(59,130,246,0.4)', x: 15, y: 78 },
+    { name: 'Kafka & Spark', glowColor: 'rgba(168,85,247,0.4)', x: 70, y: 85 },
+    { name: 'PostgreSQL & MongoDB', glowColor: 'rgba(59,130,246,0.4)', x: 15, y: 78 },
 ];
 
 const containerVariants = {

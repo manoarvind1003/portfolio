@@ -7,7 +7,7 @@ import Image from 'next/image';
 const achievements = [
     {
         id: 1,
-        title: '15+',
+        title: '3+',
         subtitle: 'Projects Completed',
         icon: Rocket,
         span: 'col-span-2 sm:col-span-2 lg:col-span-2',
@@ -29,7 +29,7 @@ const achievements = [
     },
     {
         id: 3,
-        title: '100+',
+        title: '10+',
         subtitle: 'Datasets Analyzed',
         icon: Database,
         span: 'col-span-2 sm:col-span-1 lg:col-span-1',
@@ -75,7 +75,7 @@ export default function Achievements() {
                     {/* LEFT COLUMN: Character Stage */}
                     <div className="lg:col-span-5 relative h-[450px] md:h-[520px] w-full flex flex-col justify-center items-center order-2 lg:order-1">
                         {/* Dynamic Floating Shadow */}
-                        <motion.div 
+                        <motion.div
                             className="absolute bottom-4 w-[240px] h-[30px] rounded-full bg-accent-purple/10 border border-accent-purple/20 blur-md pointer-events-none"
                             animate={{ scale: [1, 0.85, 1], opacity: [0.6, 0.3, 0.6] }}
                             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}

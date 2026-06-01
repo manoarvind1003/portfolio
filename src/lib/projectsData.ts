@@ -5,7 +5,10 @@ export type ProjectCategory =
     | 'Power BI'
     | 'SQL'
     | 'Python'
-    | 'Full Stack';
+    | 'Full Stack'
+    | 'Data Engineering'
+    | 'Big Data'
+    | 'Real-Time Analytics';
 
 export interface Project {
     id: number;
@@ -24,54 +27,6 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
-        title: 'Stock Price Prediction',
-        description: 'LSTM model to predict stock prices using historical data with high accuracy.',
-        longDescription:
-            'Built a Long Short-Term Memory (LSTM) neural network to forecast stock prices using historical OHLCV data. Implemented feature engineering, data normalisation, and a sliding-window approach for time-series modelling.',
-        tags: ['Python', 'LSTM', 'TensorFlow', 'Finance'],
-        categories: ['Machine Learning', 'Deep Learning', 'Python'],
-        gradient: 'from-accent-blue/20 to-accent-purple/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-blue)] hover:border-accent-blue/50',
-        featured: true,
-    },
-    {
-        id: 2,
-        title: 'Customer Churn Analysis',
-        description: 'Analyzed customer behavior and built churn prediction model with actionable insights.',
-        longDescription:
-            'Performed EDA on a telecom dataset, engineered features, and trained classification models (Logistic Regression, XGBoost, Random Forest) to predict customer churn with F1-score optimisation.',
-        tags: ['Python', 'XGBoost', 'Scikit-learn', 'Analytics'],
-        categories: ['Machine Learning', 'Python'],
-        gradient: 'from-accent-purple/20 to-accent-gold/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-purple)] hover:border-accent-purple/50',
-        featured: true,
-    },
-    {
-        id: 3,
-        title: 'Fake News Detection',
-        description: 'NLP-based model to detect fake news from real news with deep learning.',
-        longDescription:
-            'Developed a binary text classifier using TF-IDF + Logistic Regression baseline and a BERT-based fine-tuned model, achieving >95 % accuracy on the LIAR benchmark dataset.',
-        tags: ['Python', 'NLP', 'BERT', 'Deep Learning'],
-        categories: ['NLP / AI', 'Deep Learning', 'Python'],
-        gradient: 'from-accent-blue/20 to-accent-gold/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-gold)] hover:border-accent-gold/50',
-        featured: true,
-    },
-    {
-        id: 4,
-        title: 'Sales Dashboard',
-        description: 'Interactive dashboard for sales insights using Power BI with real-time data.',
-        longDescription:
-            'Designed an end-to-end Power BI dashboard connecting to live SQL data sources. Created DAX measures for YoY growth, region-wise performance, and product category breakdowns with drill-through functionality.',
-        tags: ['Power BI', 'DAX', 'SQL', 'Analytics'],
-        categories: ['Power BI', 'SQL'],
-        gradient: 'from-accent-gold/20 to-accent-blue/20',
-        glow: 'hover:shadow-[0_0_30px_var(--app-accent-blue)] hover:border-accent-blue/50',
-        featured: true,
-    },
-    {
-        id: 5,
         title: 'Zwiggy — Swiggy Data & Analytics Clone',
         description: 'Dynamic food delivery platform with robust MySQL backend and live SQL analytics BI dashboard.',
         longDescription:
@@ -83,7 +38,33 @@ export const projects: Project[] = [
         githubLink: 'https://github.com/manoarvind1003/SQL-PROJECT',
         liveLink: 'https://sql-project-u3on.onrender.com/',
         featured: true,
+    }, {
+        id: 2,
+        title: 'End-to-End Real-Time Food Delivery Data Pipeline',
+        description: 'Real-time food delivery analytics pipeline built with Kafka, PySpark, Airflow, PostgreSQL, Docker, and Power BI.',
+        longDescription:
+            `Built a complete real-time data pipeline for a food delivery platform using Kafka, PySpark, Airflow, PostgreSQL, Docker, and Power BI. The system ingests streaming order data, processes it in real-time, stores it in a PostgreSQL data warehouse, and visualizes key metrics through an interactive Power BI dashboard.`,
+        tags: ['Kafka', 'PySpark', 'Airflow', 'PostgreSQL', 'Docker', 'Power BI'],
+        categories: ['Data Engineering', 'Big Data', 'Real-Time Analytics'],
+        gradient: 'from-accent-blue/20 to-accent-purple/20',
+        glow: 'hover:shadow-[0_0_30px_var(--app-accent-blue)] hover:border-accent-blue/50',
+        githubLink: 'https://github.com/manoarvind1003/BIGDATA-ETL-PIPELINE-PROJECT',
+        featured: true,
+    }, {
+        id: 3,
+        title: 'NodeShare | Secure File Sharing Platform with React, Express & Supabase',
+        description: 'Real-time food delivery analytics pipeline built with Kafka, PySpark, Airflow, PostgreSQL, Docker, and Power BI.',
+        longDescription:
+            `Built a complete real-time data pipeline for a food delivery platform using Kafka, PySpark, Airflow, PostgreSQL, Docker, and Power BI. The system ingests streaming order data, processes it in real-time, stores it in a PostgreSQL data warehouse, and visualizes key metrics through an interactive Power BI dashboard.`,
+        tags: ['React', 'Express', 'Supabase', 'Node.js', 'PostgreSQL', 'Docker', 'Power BI'],
+        categories: ['Full Stack', 'SQL', 'Python'],
+        gradient: 'from-accent-blue/20 to-accent-purple/20',
+        glow: 'hover:shadow-[0_0_30px_var(--app-accent-blue)] hover:border-accent-blue/50',
+        githubLink: 'https://github.com/manoarvind1003/NODESHARE',
+        liveLink: 'https://nodeshare.vercel.app/',
+        featured: true,
     },
+
 ];
 
 // All unique categories derived from project data
@@ -106,4 +87,7 @@ export const CATEGORY_COLOR: Record<ProjectCategory, string> = {
     'SQL': 'accent-purple',
     'Python': 'accent-gold',
     'Full Stack': 'accent-blue',
+    'Data Engineering': 'accent-blue',
+    'Big Data': 'accent-purple',
+    'Real-Time Analytics': 'accent-gold',
 };

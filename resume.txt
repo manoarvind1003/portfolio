@@ -1,0 +1,66 @@
+Mano Arvind
++91 9384789008 — manoarvind27@gmail.com — https://www.linkedin.com/in/manoarvind/ — Website
+Summary
+Aspiring Data Analyst and Data Engineer with hands-on experience in SQL, Python, Excel, Power BI, Apache
+Spark, Kafka, and PostgreSQL. Skilled in data cleaning, transformation, analysis, visualization, and building
+end-to-end data pipelines. Experienced in developing data-driven solutions, interactive dashboards, and real-time
+data processing systems to support business decision-making. Passionate about leveraging data to uncover insights
+and solve complex problems.
+Technical Skills
+Programming:Python, R, SQL, Java, JavaScript
+Data Engineering:ETL Pipelines, Data Modeling, Data Warehousing, Apache Spark, PySpark, Hadoop, Hive,
+Apache Kafka, Databricks, Apache Airflow
+Databases & Querying:MySQL, PostgreSQL, MongoDB, SQLite, SQL Queries, Database Design, Query
+Optimization
+Data Science & Machine Learning:NumPy, Pandas, Scikit-learn, TensorFlow, Keras, OpenCV
+Business Intelligence & Visualization:Power BI, Tableau, Microsoft Excel, Matplotlib, Seaborn, Plotly,
+Dashboard Development, KPI Reporting
+Cloud Platforms:AWS, Microsoft Azure
+Tools & Technologies:Git, Docker, Linux, Jupyter Notebook, VS Code
+Soft Skills:Problem Solving, Analytical Thinking, Communication, Team Collaboration, Critical Thinking, Time
+Management, Adaptability, Attention to Detail
+Work Experience
+Data Science Intern Nov 2025 – Jan 2026
+MGRID Technologies, Hyderabad Python, Machine Learning, MERN Stack
+–Developed a career recommendation system using the MERN stack to help users identify suitable career paths based on
+skills, interests, and learning preferences.
+–Built and integrated a machine learning-based recommendation engine that generated personalized career suggestions
+with improved relevance and accuracy.
+–Implemented secure user authentication and role-based access control for students and administrators.
+–Designed interactive dashboards to visualize user activity, recommendation results, and platform usage metrics,
+enhancing user experience and decision-making.
+–Collaborated with the development team to integrate frontend, backend, and machine learning components into a
+scalable web application.
+Projects
+Food Delivery Analytics Pipeline|Python, Kafka, Spark, PostgreSQL, Power BI2026
+–Built an end-to-end real-time analytics pipeline for food delivery order data using Apache Kafka, PySpark, PostgreSQL,
+and Power BI.
+–Streamed order events through Kafka topics and processed them using Spark transformations for aggregation and trend
+analysis.
+–Designed PostgreSQL schemas and automated data loading workflows for efficient storage and querying.
+–Created interactive Power BI dashboards to monitor order volume, revenue trends, delivery performance, and payment
+analytics in near real time.
+Career Recommendation System|MERN Stack, Machine Learning, Python2025
+–Developed a web-based career recommendation platform that suggests suitable career paths based on user skills,
+interests, and educational background.
+–Built and trained machine learning models to generate personalized recommendations with improved prediction accuracy.
+–Implemented secure authentication, user management, and interactive dashboards using the MERN stack.–Integrated frontend, backend, and machine learning components into a scalable full-stack application.
+NodeShare - File Sharing Platform|Node.js, Express.js, MongoDB2026
+–Developed a secure file-sharing platform enabling users to upload, manage, and share files through generated links.
+–Implemented file storage, metadata management, and download tracking functionalities using Node.js and MongoDB.
+–Designed REST APIs for file operations and optimized backend performance for handling multiple concurrent requests.
+–Built a responsive user interface with streamlined workflows for file upload and sharing.
+Certifications
+–IBM SkillsBuild Data Science Learning Path– Completed foundational training in Data Science, Data Analytics,
+and AI concepts through IBM SkillsBuild.
+– AWS Educate Cloud Learning– Completed cloud computing fundamentals, database, and cloud operations learning
+modules with hands-on practice.
+– Microsoft Learn Data Scientist Path– Completed self-paced learning modules covering data science, machine
+learning, and analytics concepts.
+– Google Cloud Skills Training– Learned cloud fundamentals, analytics concepts, and cloud-based data processing
+workflows.
+– Built Multiple End-to-End Projectsusing Python, SQL, Power BI, Apache Spark, Kafka, PostgreSQL, Machine
+Learning, and MERN Stack technologies.
+Education
+Bachelor of Science (BSc) in Data Science2023 – 2026
+SIES College of Arts, Science & Commerece, Sion (west), Mumbai - 400 022 CGPA: 9 / 10

@@ -62,9 +62,9 @@ export default function Contact() {
                                     <MapPin size={22} className="transition-transform duration-300 group-hover:scale-110" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] text-text-muted uppercase tracking-[0.2em] font-semibold mb-1">Location</p>
+                                    <p className="text-[10px] text-text-muted uppercase tracking-[0.2em] font-semibold mb-1">Phone</p>
                                     <p className="text-text-primary font-medium tracking-wide transition-colors duration-300 group-hover:text-accent-purple">
-                                        India
+                                        +91 9384789008
                                     </p>
                                 </div>
                             </div>
@@ -72,11 +72,11 @@ export default function Contact() {
 
                         {/* Social Links */}
                         <div className="flex items-center gap-4">
-                            <a href="#" className="w-11 h-11 rounded-xl bg-card-hover/40 flex items-center justify-center text-text-secondary hover:text-white transition-all duration-300 border border-card-border/50 hover:border-accent-blue relative overflow-hidden group">
+                            <a href="https://github.com/manoarvind1003" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-xl bg-card-hover/40 flex items-center justify-center text-text-secondary hover:text-white transition-all duration-300 border border-card-border/50 hover:border-accent-blue relative overflow-hidden group">
                                 <span className="absolute inset-0 bg-accent-blue scale-0 group-hover:scale-100 transition-transform duration-300 origin-center rounded-xl -z-10" />
                                 <GitBranch size={18} className="relative z-10" />
                             </a>
-                            <a href="#" className="w-11 h-11 rounded-xl bg-card-hover/40 flex items-center justify-center text-text-secondary hover:text-white transition-all duration-300 border border-card-border/50 hover:border-[#0A66C2] relative overflow-hidden group">
+                            <a href="https://www.linkedin.com/in/manoarvind/" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-xl bg-card-hover/40 flex items-center justify-center text-text-secondary hover:text-white transition-all duration-300 border border-card-border/50 hover:border-[#0A66C2] relative overflow-hidden group">
                                 <span className="absolute inset-0 bg-[#0A66C2] scale-0 group-hover:scale-100 transition-transform duration-300 origin-center rounded-xl -z-10" />
                                 <Globe size={18} className="relative z-10" />
                             </a>

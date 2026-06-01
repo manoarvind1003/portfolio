@@ -6,8 +6,8 @@ import { Award, BookOpen, Brain, Code2 } from 'lucide-react';
 import Image from 'next/image';
 
 const stats = [
-    { id: 1, label: 'Projects Completed', value: 2, suffix: '+' },
-    { id: 2, label: 'Technologies Mastered', value: 10, suffix: '+' },
+    { id: 1, label: 'Projects Completed', value: 3, suffix: '+' },
+    { id: 2, label: 'Technologies Mastered', value: 15, suffix: '+' },
     { id: 3, label: 'Certifications', value: 4, suffix: '+' },
     { id: 4, label: 'Dedication Rate', value: 100, suffix: '%' },
 ];
@@ -108,10 +108,10 @@ export default function About() {
                         <div className="space-y-6">
                             <div className="h-1 w-12 bg-accent-blue rounded-full group-hover:w-20 transition-all duration-500" />
                             <p className="text-text-secondary text-base md:text-lg leading-relaxed font-normal">
-                                A motivated Data Science graduate with a robust structural framework in machine learning architectures, exploratory data visualization, and systematic analysis.
+                                Aspiring Data Analyst and Data Engineer with hands-on experience in SQL, Python, Excel, Power BI, Apache Spark, Kafka, and PostgreSQL. Skilled in data cleaning, transformation, analysis, visualization, and building end-to-end data pipelines.
                             </p>
                             <p className="text-text-muted text-sm md:text-base leading-relaxed font-light">
-                                I specialize in shifting convoluted, unstructured data structures into crisp, actionable architectural systems and building clean, predictive micro-solutions engineered for real-world impact.
+                                Experienced in developing data-driven solutions, interactive dashboards, and real-time data processing systems to support business decision-making. Passionate about leveraging data to uncover insights and solve complex problems.
                             </p>
                         </div>
 
