@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '@/components/ThemeProvider';
 import TopActions from '@/components/TopActions';
+import ChatBot from "@/components/ChatBot";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <div className="fixed inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-accent-blue/10 via-bg-primary to-bg-primary -z-10 transition-colors duration-500"></div>
+         <ChatBot />
           <TopActions />
           {children}
         </ThemeProvider>
